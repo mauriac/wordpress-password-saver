@@ -156,6 +156,9 @@ class Pasav {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'init', $plugin_admin, 'register_save_password_cpt' );
+		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'get_save_password_metabox' );
+		$this->loader->add_action( 'save_post_' . PASAV_CONFIG_CPT, $plugin_admin, 'save_pasav_config_cpt', 10 );
 
 	}
 

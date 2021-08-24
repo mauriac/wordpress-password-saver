@@ -65,6 +65,13 @@ register_deactivation_hook( __FILE__, 'deactivate_pasav' );
 require plugin_dir_path( __FILE__ ) . 'includes/class-pasav.php';
 
 /**
+ * Cpt designation.
+ */
+define( 'PASAV_CONFIG_CPT', 'password_saver_cpt' );
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-pasav-password-saver.php';
+
+/**
  * Begins execution of the plugin.
  *
  * Since everything within the plugin is registered via hooks,
